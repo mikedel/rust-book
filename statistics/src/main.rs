@@ -22,11 +22,20 @@ fn mode(v: &Vec<i32>) -> i32 {
     mode
 }
 
+fn average(v: &Vec<i32>) -> f64 {
+    let mut sum = 0;
+    for &i in v {
+        sum += i;
+    }
+    sum as f64 / v.len() as f64
+}
+
 fn main() {
     println!("Start");
     let v = vec![1, 2, 3, 4, 5, 6, 7, 8, 8, 8];
     println!("Median: {}", median(&v));
     println!("Mode: {}", mode(&v));
+    println!("Average: {}", average(&v));
 
     println!("Hello, world!");
 }
